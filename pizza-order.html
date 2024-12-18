@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Best News Ever</title>
+        
+    </head>
+    <body>
+        <header>
+            <h1>Best Pizza Ever!</h1>
+            <h3>Come and Get some</h3>
+
+        </header>
+
+        <main>
+
+            <section id="contact-form">
+                <h2>Place Order</h2>
+                <form method="POST" action="place-order.php">
+                    <h4>Delivery</h4>
+                    <input name="deliveryMethod" type="radio" value="delivery" />Delivery<br />
+                    <input name="deliveryMethod" type="radio" value="Pickup" /> Pickup<br />
+
+
+                    <h4>Address</h4>
+                    <input name="address1" placeholder="Address Line 1" class="lg-input"/><br />
+                    <input name="address2" placeholder="Address Line 2" class="lg-input"><br />
+
+                    <input name="City" placeholder="City" class="sm-input" />
+                    <input name="State" placeholder="State" class="sm-input" /><br />
+                    <input name="Zip" placeholder="Zip code" class="sm-input" />
+                    <br />
+                    <br />
+
+                    <h4>Size</h4>
+                    <select name="size">
+                        <option value="12">12" - $13.99</option>
+                        <option value="16">16" - $16.99</option>
+                        <option value="18">18" - $19.99</option>
+                        <option value="72">72" - $100.99</option>
+                    </select>
+
+
+                    <h4>Ingredients</h4>
+                    <input name="ingredient" type="checkbox" value="pepperoni"/> Pepperoni<br />
+                    <input name="ingredient" type="checkbox" value="salami" /> Salami<br />
+                    <input name="ingredient" type="checkbox" value="bacon"/> Bacon<br />
+                    <input name="ingredient" type="checkbox" value="sausage"/>Italian Suasage<br />
+                    <input name="ingredient" type="checkbox" value="onion"/>Onion<br />
+                    <input name="ingredient" type="checkbox" value="peppers"/>Peppers<br />
+
+                    <br /><br />
+                    <button type="submit">Place Order</button>
+
+
+
+                    
+                </form>
+            </section>
+
+            <footer>
+                <center>&copy: 2016<br />
+                <a href="#">Terms of service</a>
+            </center>
+            </footer>
+        </main>
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+
+
+
+
+
+</html>
