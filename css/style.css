@@ -1,19 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC+Guides&family=Playwrite+HR+Lijeva+Guides&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
-    background: rgb(255,200,100, .5);
-    color:#0af;
-    
-    
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 300;
+    margin: 0;
 }
 
-body > header > h3 {
-    background:#fff;
-    color:#0f0;
+body h1 {
+    font-weight: 300;
+    margin: 20px 30px;
 }
 
-h3 {
-    color:#000000;
-}
-
-body h3 {
-    color: #f00;
+#main-header {
+    border-bottom: 2px solid #000;
 }
