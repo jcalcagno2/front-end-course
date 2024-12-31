@@ -59,6 +59,10 @@ a {
 
 }
 
+a:hover, a.more-link.bolded-link:hover {
+    color: #8f8;
+}
+
 .more-link {
     font-style: italic;
 }
@@ -71,7 +75,30 @@ a {
     color:#f00;
 }
 
-p {
-    text-align: center;
+.my-input {
+    display:block;
+    width:90%;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 10px 20px 2px 50px;
+    border:1px solid #aaa;
 
+}
+
+.my-input:focus {
+    background:#d5ffc2;
+    color: #f00;
+    outline:none;
+    border: 1px solid #000;
+}
+
+article:active {
+    opacity: .4;
+}
+
+.article-image {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    
 }
