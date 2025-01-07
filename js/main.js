@@ -7,16 +7,9 @@ else {
     alert("False")
 } 
 
-var myAge = 3;
 
-if (myAge < 1) {
-    console.log("Youre are a boby")
+function myVar() {
+    console.log("My name is joe")
+}
 
-} else if (myAge < 3) {
-    console.log("Older")
-}
-else if(myAge < 10) {
-    console.log("You are big kid")
-} else {
-    console.log("You must be too old.")
-}
+myVar();
