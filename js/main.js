@@ -1,15 +1,11 @@
-var isPremiumUser = false;
-
-if (isPremiumUser) {
-    alert("Thanks for being a loyal customer")
-}
-else {
-    alert("False")
-} 
-
-
-function myVar() {
-    console.log("My name is joe")
+function buttonClicked() {
+    console.log("Button Clicked");
+    btn.removeEventListener("click", buttonClicked);
+    document.getElementById("text").innerHTML = "Dont do it"
+    console.log(document.getElementById("text").innerHTML);
 }
 
-myVar();
+
+var btn = document.getElementById("go-button");
+
+btn.addEventListener("click", buttonClicked);
