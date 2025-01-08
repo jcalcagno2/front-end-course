@@ -100,13 +100,13 @@ a:hover, a.more-link.bolded-link:hover {
     color:#f00;
 }
 
-.my-input {
+.my-input, .my-textarea { 
     display:block;
     width:90%;
     margin: 10px;
     padding: 10px 20px;
-    border-radius: 10px 20px 2px 50px;
     border:1px solid #aaa;
+    resize: none;
 
 }
 
@@ -134,3 +134,4 @@ article:active {
 
     border: 2px solid #000;
 }
+
