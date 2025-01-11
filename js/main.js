@@ -1,12 +1,21 @@
+function alertMe() {
+    alert("hi");
+}
+
 $(document).ready(function() {
 
-    alert("Loaded");
+   
 
-    document.getElementById('text').innerHTML = "This is my text";
+    var el = document.getElementById
 
-    $('#text').html("This is now my text");
+    console.log("El in Vanilla JS", el);
 
-    $('.my-input').val("New Input Val");
+    console.log("El in jQuery:", $(el));
 
+    document.getElementById('go-button').addEventListener('click', alertMe);
+
+    $('#go-button').on('mouseup',function(){
+        console.log("Fantastic button click");
+    });
 
 });
