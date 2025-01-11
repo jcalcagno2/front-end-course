@@ -18,7 +18,7 @@ body h1 {
 }
 
 #site-title {
-    font-family: 'Press Start 2P', sans-serif;
+    display: inline-block;
 }
 
 #main-header {
@@ -48,90 +48,62 @@ body h1 {
 }
 
 article {
-    width:311px;
+    width:301px;
     display:inline-block;
     border: 1px solid #000;
     padding: 10px;
-    margin: 10px;
+    margin: 0px;
     box-shadow: 2px 2px 6px rgba(0,0,0,.3);
-    transition:box-shadow 500ms, background 3s;
-    transition-delay: 5s;
-}
-
-article:hover {
-    box-shadow: 5px 5px 20px rgba(0,0,0,.7);
-    background: #aaa;
-
-}
-
-article img {
-    width: 100%;
-    height: 100px;
-
-}
-
-.article-image {
-    height: 200px;
-    width:100%;
-    background-size: cover !important;
-    background-position: center !important;
-
-}
-
-a {
-    text-decoration: underline line-through overline;
-    text-decoration-style: dotted;
-
-}
-
-a:hover, a.more-link.bolded-link:hover {
-    color: #8f8;
-}
-
-.more-link {
-    font-style: italic;
-}
-
-.bolded-link {
-    font-weight: 900;
-}
-
-.more-link.bolded-link {
-    color:#f00;
-}
-
-.my-input, .my-textarea { 
-    display:block;
-    width:90%;
-    margin: 10px;
-    padding: 10px 20px;
-    border:1px solid #aaa;
-    resize: none;
-
-}
-
-.my-input:focus {
-    background:#d5ffc2;
-    color: #f00;
-    outline:none;
-    border: 1px solid #000;
-}
-
-article:active {
-    opacity: .4;
-}
-
-.article-image {
-    height: 200px;
-    width: 200px;
-    border-radius: 100%;
+    transition: box-shadow 500ms, background 3s;
     
 }
 
-.my-text {
-    height: 100px;
-    max-height: 200px;
-
-    border: 2px solid #000;
+#site-title {
+    display: inline-block;
 }
+
+.profile-menu {
+    list-style: none;
+    float:right;
+    margin-top: 30px;
+    margin-right: 20px;   
+}
+
+[data-trigger="dropdown"] {
+    padding-bottom: 35px;
+}
+
+.submenu {
+    list-style: none;
+    padding: 0px;
+    border: 1px solid #aaa;
+    background: #fff;
+    margin-top: 30px;
+    box-shadow: 2px 2px 15px rgba(0,0,0,.3);
+    width: 300px;
+    position: absolute;
+    right: 10px;
+    display: none;
+}
+
+.submenu.active {
+    display:block;
+
+}
+
+.submenu a {
+    text-decoration: none;
+    padding: 10px 10px;
+    display: block;
+    color: #333;
+    text-shadow: none;
+    font-weight: 600;
+    letter-spacing: 0px;
+}
+
+.submenu a:hover{
+    background: #333;
+}
+
+
 

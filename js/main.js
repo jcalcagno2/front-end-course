@@ -1,21 +1,17 @@
-function alertMe() {
-    alert("hi");
-}
 
 $(document).ready(function() {
+    var el = document.getElementById('text');
+
+   $('[data-trigger="dropdown"]').on('mouseenter', function() {
+
+    var submenu = $(this).parent().find('.submenu');
+    submenu.fadeIn(300);
+
+    $('.profile-menu').on('mouseleave', function() {
+        submenu.fadeOut(300);
+    })
 
    
-
-    var el = document.getElementById
-
-    console.log("El in Vanilla JS", el);
-
-    console.log("El in jQuery:", $(el));
-
-    document.getElementById('go-button').addEventListener('click', alertMe);
-
-    $('#go-button').on('mouseup',function(){
-        console.log("Fantastic button click");
     });
-
 });
+
