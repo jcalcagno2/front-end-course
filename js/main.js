@@ -9,9 +9,33 @@ $(document).ready(function() {
 
     $('.profile-menu').on('mouseleave', function() {
         submenu.fadeOut(300);
-    })
-
-   
+        })
     });
+
+    $('#prepend, #append, #replace').on('click', function(e) {
+
+        var el = $(e.currentTarget);
+        var action = el.attr('id');
+        var content = $('.text').val();
+
+        if (action == "prepend") {
+            console.log("prepend");
+            $('#main').prepend(content);
+
+        } else if (action =="append") {
+           console.log("append");
+           $('#main').append(content);
+
+        } else if(action =="replace") {
+            console.log("replace");
+            $('#main').html(content);
+
+        }
+
+        $('text').val('');
+
+    });
+
+
 });
 
