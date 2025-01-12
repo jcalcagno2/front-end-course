@@ -2,6 +2,13 @@
 $(document).ready(function() {
     var el = document.getElementById('text');
 
+    $('[href="https://google.com"]').on('click', function(event){
+        console.log("That button broke");
+        event.preventDefault();
+
+        return true;
+});
+
    $('[data-trigger="dropdown"]').on('mouseenter', function() {
 
     var submenu = $(this).parent().find('.submenu');
