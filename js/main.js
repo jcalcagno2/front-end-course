@@ -2,13 +2,40 @@
 $(document).ready(function() {
     var el = document.getElementById('text');
 
-    $('[href="https://google.com"]').on('click', function(event){
-        console.log("That button broke");
+    $(document).on('contextmenu', function() {
+        return false; 
+    });
+
+    $(document).on('click', function(){
+
+    });
+
+    $(document).on('mousedown', function(event) {
         event.preventDefault();
 
-        return true;
-});
+        if(event.which == 3) {
 
+            $('.hidden').removeClass('shown');
+
+            if ($(event.target).is('img')) {
+                $('.saveimg, .newtab').addClass('shown');
+            } else if ($(event.target).is('a')) {
+                $('.newtab').addClass('shown');
+            }
+            console.log(event.pageY, event.pageX)
+
+            $('#context').css({
+                top: event.pageY,
+                left: event.pageX
+            });
+
+            $('#context').fadeIn();
+            return false;
+        }
+
+        $('#context').fadeOut();
+    });
+    
    $('[data-trigger="dropdown"]').on('mouseenter', function() {
 
     var submenu = $(this).parent().find('.submenu');
@@ -16,11 +43,11 @@ $(document).ready(function() {
 
     $('.profile-menu').on('mouseleave', function() {
         submenu.fadeOut(300);
-        })
+        });
     });
 
     $('#prepend, #append, #replace').on('click', function(e) {
-
+        
         var el = $(e.currentTarget);
         var action = el.attr('id');
         var content = $('.text').val();
