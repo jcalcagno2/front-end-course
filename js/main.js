@@ -5,8 +5,8 @@ $(document).ready(function() {
     console.log($('.submenu a').first('a').text());
     console.log($('.submenu a').last('a').text());
 
-    gQuery(".my-selector").addClass("MYNEWCLASS");
-    gQuery("#main").addClass("HELLO");
+   // gQuery(".my-selector").addClass("MYNEWCLASS");
+   // gQuery("#main").addClass("HELLO");
     
    $('[data-trigger="dropdown"]').on('mouseenter', function() {
 
@@ -42,6 +42,22 @@ $(document).ready(function() {
 
     });
 
+    $('textarea').focusin(function(){
+        console.log("Focused in on the textarea");
+
+    });
+
+    $('textarea').focusout(function(){
+        console.log("Text area has lost focus")
+    });
+
+    $('input').focusout(function(){
+        if($(this).val().indexOf('@') > -1 && $(this).val().indexOf('.') > -1) {
+            $('.status').html("Valid Email");
+        }else {
+            $('.status').html("Your email is invalid. Please try again")
+        }
+    });
 
 });
 
