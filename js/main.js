@@ -2,39 +2,8 @@
 $(document).ready(function() {
     var el = document.getElementById('text');
 
-    $(document).on('contextmenu', function() {
-        return false; 
-    });
-
-    $(document).on('click', function(){
-
-    });
-
-    $(document).on('mousedown', function(event) {
-        event.preventDefault();
-
-        if(event.which == 3) {
-
-            $('.hidden').removeClass('shown');
-
-            if ($(event.target).is('img')) {
-                $('.saveimg, .newtab').addClass('shown');
-            } else if ($(event.target).is('a')) {
-                $('.newtab').addClass('shown');
-            }
-            console.log(event.pageY, event.pageX)
-
-            $('#context').css({
-                top: event.pageY,
-                left: event.pageX
-            });
-
-            $('#context').fadeIn();
-            return false;
-        }
-
-        $('#context').fadeOut();
-    });
+    gQuery(".my-selector").addClass("MYNEWCLASS");
+    gQuery("#main").addClass("HELLO");
     
    $('[data-trigger="dropdown"]').on('mouseenter', function() {
 
