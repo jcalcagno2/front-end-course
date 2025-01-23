@@ -2,6 +2,9 @@
 $(document).ready(function() {
     var el = document.getElementById('text');
 
+    console.log($('.submenu a').first('a').text());
+    console.log($('.submenu a').last('a').text());
+
     gQuery(".my-selector").addClass("MYNEWCLASS");
     gQuery("#main").addClass("HELLO");
     
