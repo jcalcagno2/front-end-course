@@ -1,12 +1,17 @@
-
 $(document).ready(function() {
+
+    function printThis(el) {
+        if ($(this).text()) {
+            console.log($(this).val());
+        } else {
+            console.log($(this).val());
+        }
+    }
+
     var el = document.getElementById('text');
 
     console.log($('.submenu a').first('a').text());
     console.log($('.submenu a').last('a').text());
-
-   // gQuery(".my-selector").addClass("MYNEWCLASS");
-   // gQuery("#main").addClass("HELLO");
     
    $('[data-trigger="dropdown"]').on('mouseenter', function() {
 
@@ -15,56 +20,18 @@ $(document).ready(function() {
 
     $('.profile-menu').on('mouseleave', function() {
         submenu.fadeOut(300);
+
         });
     });
 
-    $('#prepend, #append, #replace').on('click', function(e) {
+    $('input').focusin(printThis);
+
+    $('input').css({
+        background: '#f00',
+        padding: '10px',
+        borderColor: '#000',
+        backgroundSize: 'cover'
         
-        var el = $(e.currentTarget);
-        var action = el.attr('id');
-        var content = $('.text').val();
-
-        if (action == "prepend") {
-            console.log("prepend");
-            $('#main').prepend(content);
-
-        } else if (action =="append") {
-           console.log("append");
-           $('#main').append(content);
-
-        } else if(action =="replace") {
-            console.log("replace");
-            $('#main').html(content);
-
-        }
-
-        $('text').val('');
-
-    });
-
-    $('p:contains("ofpsdinfgsenf ")').html("THis had lorem in it. Suprinsingly it still does")
-
-    if($(':contains("ofpsdinfgsenf")').is("p")) {
-        console.log("Lorem is inside paragraph")
-    }
-
-
-    $('textarea').focusin(function(){
-        console.log("Focused in on the textarea");
-
-    });
-
-    $('textarea').focusout(function(){
-        console.log("Text area has lost focus")
-    });
-
-    $('input').focusout(function(){
-        if($(this).val().indexOf('@') > -1 && $(this).val().indexOf('.') > -1) {
-            $('.status').html("Valid Email");
-        }else {
-            $('.status').html("Your email is invalid. Please try again")
-        }
     });
 
 });
-
