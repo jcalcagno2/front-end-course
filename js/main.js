@@ -42,6 +42,13 @@ $(document).ready(function() {
 
     });
 
+    $('p:contains("ofpsdinfgsenf ")').html("THis had lorem in it. Suprinsingly it still does")
+
+    if($(':contains("ofpsdinfgsenf")').is("p")) {
+        console.log("Lorem is inside paragraph")
+    }
+
+
     $('textarea').focusin(function(){
         console.log("Focused in on the textarea");
 
